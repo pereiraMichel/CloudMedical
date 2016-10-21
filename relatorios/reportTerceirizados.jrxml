@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportMedicos" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7a8956f9-6d0d-4a1c-bb3c-6017cee8153b">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="nomeTerceirizado" class="java.lang.String"/>
+	<field name="nomePerfil" class="java.lang.String"/>
+	<field name="sigla" class="java.lang.String"/>
+	<field name="documento" class="java.lang.String"/>
+	<field name="nomePagamento" class="java.lang.String"/>
+	<field name="valor" class="java.lang.String"/>
+	<field name="contatos" class="java.lang.String"/>
+	<field name="servicos" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="afb58fb8-1d7c-4fa3-aa3d-922a942fc268" x="229" y="12" width="326" height="43"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Narrow" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE TERCEIRIZADOS]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement uuid="18692a3e-a8f9-4d41-89bd-ee4e20323422" stretchType="RelativeToTallestObject" x="2" y="0" width="228" height="79"/>
+				<imageExpression><![CDATA["C:\\Users\\Debug\\Documents\\NetBeansProjects\\CloudMedical\\src\\br\\com\\cloudmedical\\images\\LogoClinicaJabour.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="3342867c-046e-485c-9983-e7e23c78571c" x="114" y="0" width="16" height="20"/>
+				<textElement/>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0965e644-8658-4d17-9807-4bd57d682051" x="2" y="0" width="51" height="20"/>
+				<textElement/>
+				<text><![CDATA[Perfil]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="d101506f-74fd-4c5c-9d51-b023acb109fd" x="2" y="39" width="800" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="3974c283-95f4-435b-80c5-f3eaacf85ff8" x="53" y="0" width="61" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{sigla}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="92885915-269b-43e8-821d-c779b98007d8" x="124" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nomePerfil}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="bdf5cde1-0d5f-412f-b4ff-0dcb58759f78" x="231" y="21" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tipo de Pagamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fdfc71d8-5748-4b73-a7b5-9f5c5cda8c34" x="130" y="21" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Documento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="08e9b6f0-7b34-405c-aeb2-7c98b0aca989" x="2" y="21" width="128" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nome da Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="edd18602-414e-40c5-b61d-7fb648f5d598" x="335" y="21" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f4b16983-f025-45c3-ae96-2d52d4b95549" x="435" y="21" width="120" height="20"/>
+				<textElement/>
+				<text><![CDATA[Contatos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8d60deec-6418-4059-9498-e33ae716f58f" x="555" y="21" width="247" height="20"/>
+				<textElement/>
+				<text><![CDATA[Serviços]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement uuid="ba48a993-3581-4efb-94ab-eca04b2d1e47" x="2" y="0" width="128" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nomeTerceirizado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cea04275-5e13-4bb2-9a5f-34dbd9996815" x="231" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nomePagamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="85548ea5-a922-4b80-9d8a-2e2b6af0f526" x="130" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{documento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3cf64134-7c7c-4948-8e0f-e2c88827c082" x="335" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5c94902f-9b25-4c8a-9a98-f38a6a90580b" x="435" y="1" width="120" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{contatos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4e72293e-0e9f-48c1-be09-a24c97c80ac2" x="555" y="1" width="247" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{servicos}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="1e5d1b9b-1984-4bd5-beef-a4a0da9d4d25" x="2" y="20" width="800" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>
